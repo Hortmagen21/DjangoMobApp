@@ -1,0 +1,9 @@
+/my_project/static/images/
+/my_project/static/video/
+/my_project/static/assets/fonts/
+/my_project/static/assets/images/
+/my_project/static/fonts/
+/my_project/static/settings/fonts/
+*.jpg
+*.png
+*.svg
