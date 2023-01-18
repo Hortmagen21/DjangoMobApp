@@ -31,6 +31,8 @@ INSTALLED_APPS = [
     'core',
 ]
 
+# CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 # https://docs.djangoproject.com/en/4.1/howto/static-files/deployment/
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
@@ -110,7 +112,8 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
+LOGIN_URL = "/home/sign_in"
+HOME_URL = "/home/"
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
