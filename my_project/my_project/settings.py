@@ -28,7 +28,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'debug_toolbar',
-    'core',
+    'home',
+    'my_auth',
+
+
 ]
 
 # CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -112,8 +115,9 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-LOGIN_URL = "/home/sign_in"
-HOME_URL = "/home/"
+LOGIN_URL = "/my_auth/sign_in"
+LOGIN_REDIRECT_URL = "/home/"
+LOGOUT_REDIRECT_URL = "/my_auth/sign_in"
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/

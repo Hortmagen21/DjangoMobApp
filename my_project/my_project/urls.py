@@ -20,17 +20,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    path('my_auth/', include('my_auth.urls')),
+    path('home/', include('home.urls')),
     path('admin/', admin.site.urls),
     path('__debug__/', include('debug_toolbar.urls')),
-    path('home/', include('core.urls')),
 ]
 
 if settings.DEBUG:
     import debug_toolbar
 
-    import mimetypes
-
-    mimetypes.add_type("application/javascript", ".js", True)
     urlpatterns += [path('__debug__/', include(debug_toolbar.urls)), ]
     urlpatterns += static(settings.MEDIA_URL,
                           document_roots=settings.MEDIA_ROOT)

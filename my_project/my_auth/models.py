@@ -3,7 +3,6 @@ from django.db import models
 
 
 class Profile(models.Model):
-    pass
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     id_user = models.IntegerField()
     bio = models.TextField(blank=True)
