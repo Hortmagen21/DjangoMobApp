@@ -10,3 +10,9 @@ class Home(LoginRequiredMixin, View):
         return render(request, 'index.html')
 
 
+class Settings(View):
+
+    def get(self, request):
+        return render(request, 'setting.html')
+
+
