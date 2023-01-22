@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'home',
     'my_auth',
     'my_api.api_auth',
+    'my_api.api_home',
 
 
 ]
