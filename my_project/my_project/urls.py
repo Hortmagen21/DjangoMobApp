@@ -24,6 +24,7 @@ urlpatterns = [
     path('home/', include('home.urls')),
     path('admin/', admin.site.urls),
     path('__debug__/', include('debug_toolbar.urls')),
+    path('api/v1/auth/', include('my_api.api_auth.urls')),
 ]
 
 if settings.DEBUG:

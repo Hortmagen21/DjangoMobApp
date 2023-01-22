@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'home',
     'my_auth',
+    'my_api.api_auth',
 
 
 ]
@@ -61,6 +62,12 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+            'rest_framework.authentication.SessionAuthentication',
+    ),
+    }
 
 INTERNAL_IPS = [
     "127.0.0.1",
